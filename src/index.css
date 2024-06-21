@@ -30,9 +30,9 @@ a:hover {
 
 #root {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 body {
@@ -56,6 +56,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header {
+  width: 100%;
+  max-width: 991px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  gap: 0.5rem;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.link_nav {
+  color: white;
+  font-size: 1rem;
+  color: white;
+}
+
+.link_nav.active {
+  color: #ff7f3e;
+  font-size: 2rem;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .users__list {
