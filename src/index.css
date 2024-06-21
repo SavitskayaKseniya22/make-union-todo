@@ -66,6 +66,52 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.user__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.user__pic {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: #e5e7eb;
+  text-align: center;
+}
+
+.user__header-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ff7f3e;
+  margin: 0;
+}
+
+.user__header-email {
+  font-size: 0.8rem;
+}
+
+.user__content-item {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e5e7eb;
+}
+
+.user__content-bio {
+  color: #4b5563;
+  text-align: center;
+}
+
 .btn {
   border: none;
   cursor: pointer;
