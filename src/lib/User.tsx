@@ -30,7 +30,7 @@ export default function User() {
       {data && (
         <div className="user">
           <div className="user__header">
-            <img src="" alt="Фото" className="user__pic" />
+            <img src="/profile.svg" alt="Фото" className="user__pic" />
             <div>
               <h2 className="user__header-name">{data.name}</h2>
               <a href={`mailto:${data.email}`} className="user__header-email">
