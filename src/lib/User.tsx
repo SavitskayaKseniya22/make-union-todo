@@ -28,8 +28,8 @@ export default function User() {
           <div className="user__header">
             <img src="/profile.svg" alt="Фото" className="user__pic" />
             <div>
-              <h2 className="user__header-name">{data.name}</h2>
-              <a href={`mailto:${data.email}`} className="user__header-email">
+              <h2>{data.name}</h2>
+              <a href={`mailto:${data.email}`} className="link_sub">
                 {data.email}
               </a>
             </div>

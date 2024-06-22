@@ -11,7 +11,7 @@ export default function ToDo() {
   });
 
   return (
-    <div className="container container_todo">
+    <div className="container">
       <TaskInput
         onSumbit={(value) => {
           dispatch({

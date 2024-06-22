@@ -41,10 +41,10 @@ export default function Users() {
       {isLoading && <InfoBox needReturn={false}>it is loading...</InfoBox>}
       {isError && <InfoBox needReturn={true}>Something went wrong! Reload the page.</InfoBox>}
       {users && (
-        <ul className="users__list">
+        <ul className="users">
           {users.map((item) => {
             return (
-              <li key={item.id} className="users__item">
+              <li key={item.id}>
                 <Link to={`user/${item.id}`} state={item}>
                   {item.name}
                 </Link>
