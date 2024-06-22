@@ -1,30 +1,20 @@
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { FormEvent } from 'react';
 
 export default function TaskInput({ onSumbit }: { onSumbit: (value: string) => void }) {
-  const [textValue, setTextValue] = useState('');
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setTextValue(e.target.value);
-  };
-
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    onSumbit(textValue);
-    setTextValue('');
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const textValue = formData.get('text');
+    if (textValue) {
+      onSumbit(textValue as string);
+      form.reset();
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className="tasks__form">
-      <input
-        type="text"
-        placeholder="What are we going to do today?"
-        name="text"
-        onChange={handleChange}
-        value={textValue}
-        required
-        className="tasks__input"
-      />
+      <input type="text" placeholder="What are we going to do today?" name="text" required className="tasks__input" />
     </form>
   );
 }
