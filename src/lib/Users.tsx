@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { UserType, isUserResult } from '../types';
 import { Link } from 'react-router-dom';
-import ReturnButton from './ReturnButton';
+import InfoBox from './to-do/Info';
 
 export default function Users() {
   const [users, setUsers] = useState<UserType[] | null>(null);
@@ -38,13 +38,8 @@ export default function Users() {
 
   return (
     <div className="container">
-      {isLoading && <p>it is loading...</p>}
-      {isError && (
-        <div className="error">
-          <p>Something went wrong! Reload the page.</p>
-          <ReturnButton />
-        </div>
-      )}
+      {isLoading && <InfoBox needReturn={false}>it is loading...</InfoBox>}
+      {isError && <InfoBox needReturn={true}>Something went wrong! Reload the page.</InfoBox>}
       {users && (
         <ul className="users__list">
           {users.map((item) => {

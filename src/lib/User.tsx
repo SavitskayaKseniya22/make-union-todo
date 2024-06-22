@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom';
 import { UserType, isUser } from '../types';
 import { useEffect, useState } from 'react';
 import ReturnButton from './ReturnButton';
+import InfoBox from './to-do/Info';
 
 export default function User() {
   const [data, setData] = useState<UserType | null>(null);
@@ -21,12 +22,7 @@ export default function User() {
 
   return (
     <div className="container">
-      {isError && (
-        <div className="error">
-          <p>No data found</p>
-          <ReturnButton />
-        </div>
-      )}
+      {isError && <InfoBox needReturn={true}>No data found</InfoBox>}
       {data && (
         <div className="user">
           <div className="user__header">
