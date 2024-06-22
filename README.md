@@ -30,13 +30,19 @@ To navigate between applications, use links in the header.
 git clone git@github.com:SavitskayaKseniya22/make-union-todo.git
 ```
 
-2. Install dependencies
+2. Change directory
+
+```bash
+cd make-union-todo
+```
+
+3. Install dependencies
 
 ```bash
 npm install
 ```
 
-3. Start the dev server
+4. Start the dev server
 
 ```bash
 npm run dev
