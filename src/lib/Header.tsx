@@ -8,8 +8,8 @@ export default function HeaderLayout() {
           users
         </NavLink>
         &#9752;
-        <NavLink to="/todo" className="link_nav">
-          to-do
+        <NavLink to="/to-do" className="link_nav">
+          ToDo
         </NavLink>
       </header>
       <main className="main">

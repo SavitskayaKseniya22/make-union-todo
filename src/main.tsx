@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Users from './lib/Users.tsx';
 import User from './lib/User.tsx';
-import './index.css';
 import HeaderLayout from './lib/Header.tsx';
+import ToDo from './lib/to-do/ToDo.tsx';
+import './index.css';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: 'user/:userId',
         element: <User />,
+      },
+      {
+        path: '/to-do',
+        element: <ToDo />,
       },
     ],
   },
